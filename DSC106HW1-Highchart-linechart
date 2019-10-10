@@ -1,0 +1,82 @@
+  <html>
+    <head>
+        <title>LineChart</title>
+    </head>
+    <body>
+        <h1>Line Chart</h1>
+
+      
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="container"></div>
+<script>Highcharts.chart('container', {
+
+    title: {
+        text: 'UCSD Admissions 2005-2018'
+    },
+
+
+    yAxis: {
+        title: {
+            text: '# People'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2005
+        }
+    },
+    series: [{
+                name: 'Men Admitted',
+                data: [7580,	9210,	8419,	8517,	7816,	8365,	8707,	10917,	11866,	11758,	12748,	14103,	13981,	13781
+]
+            }, {
+                name: 'Women Admtted',
+                data: [10311,	12135,	10759,	11200,	9863,	9991,	10269,	12046,	12966,	12837,	13761,	16170,	16231,	15821
+]
+            }, {
+                name: 'Men Enrolled',
+                data: [1607,	2031,	1838,	1893,	1695,	1858,	1583,	2328,	2616,	2538,	2711,	2669,	2725,	3220
+]
+            }, {
+                name: 'Women Enrolled',
+                data: [2113,	2558,	2303,	2399,	2054,	2089,	1861,	2245,	2612,	2383,	2581,	3077,	2974,	3484
+]
+            }, {
+                name: 'Men Applied',
+                data: [18147,19838,20566,21590,21725,22332,25097,28758,31992,34618,37009,39779,41583,45636]
+            }, {
+                name: 'Women Applied',
+                data: [22371,23748,24507,25775,25321,25761,28351,32049,35408,38822,41047,44430,46845,52265]
+            }
+        ],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});</script>
+    </body>
+</html>
